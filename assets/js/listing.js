@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded',async()=>{
   let posts=[];
   try{const response=await fetch('content/posts.json',{cache:'no-store'});posts=await response.json()}catch(error){return}
   document.querySelectorAll('[data-category-list]').forEach(container=>{
-    const category=container.dataset.categoryList;
-    const matched=posts.filter(post=>post.category===category);
+    const categories=container.dataset.categoryList.split(',').map(item=>item.trim());
+    const matched=posts.filter(post=>categories.includes(post.category));
     if(matched.length){container.innerHTML=matched.map(post=>`<a href="article.html?slug=${encodeURIComponent(post.slug)}"><span>${post.title}</span><small>${post.date}</small></a>`).join('')}
   });
   const cloud=document.querySelector('#tag-cloud');
