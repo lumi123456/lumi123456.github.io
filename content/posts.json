@@ -1,0 +1,12 @@
+[
+  {
+    "slug": "hello-lumi-lab",
+    "title": "欢迎来到 lumi 的成长实验室",
+    "date": "2026-09-22",
+    "category": "站点记录",
+    "tags": ["开始", "学习笔记"],
+    "summary": "这是一次新的开始。我会在这里持续整理 Python、提示词工程与 AI Agent 开发的学习成果。",
+    "file": "content/articles/hello-lumi-lab.md",
+    "readingTime": "2 分钟"
+  }
+]

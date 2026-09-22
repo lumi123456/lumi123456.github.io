@@ -1,21 +1,71 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>lumi的成长实验室</title>
-  <style>
-    body {
-      max-width: 720px;
-      margin: 80px auto;
-      padding: 0 24px;
-      font-family: system-ui, sans-serif;
-      line-height: 1.8;
-    }
-  </style>
+  <meta name="description" content="lumi 的成长实验室：记录 Python、大模型提示词与 AI Agent 的学习和实践。">
+  <meta name="theme-color" content="#07111f">
+  <title>lumi 的成长实验室</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-  <h1>你好，我是lumi</h1>
-  <p>欢迎来到我的成长实验室</p>
+<body data-page="home">
+  <div class="site-shell">
+    <header class="mobile-header">
+      <a class="brand brand--compact" href="index.html" aria-label="回到首页"><span class="brand-mark">L</span><span>lumi.lab</span></a>
+      <button class="icon-button menu-toggle" type="button" aria-label="打开导航" aria-expanded="false"><span></span><span></span></button>
+    </header>
+    <aside class="left-rail" aria-label="主导航">
+      <a class="brand" href="index.html"><span class="brand-mark">L</span><span><strong>lumi</strong><small>成长实验室</small></span></a>
+      <nav class="main-nav">
+        <p class="nav-label">探索</p>
+        <a class="nav-link is-active" href="index.html"><span>01</span>首页</a>
+        <a class="nav-link" href="categories.html"><span>02</span>学习专题</a>
+        <a class="nav-link" href="tags.html"><span>03</span>标签索引</a>
+        <p class="nav-label">关于</p>
+        <a class="nav-link" href="about.html"><span>04</span>关于本站</a>
+      </nav>
+      <div class="rail-footer">
+        <button class="theme-toggle" type="button" aria-label="切换明暗主题"><span class="theme-icon">◐</span><span class="theme-label">切换主题</span></button>
+        <p>持续学习，持续构建。</p>
+      </div>
+    </aside>
+    <main class="main-content">
+      <section class="intro-panel">
+        <div>
+          <p class="eyebrow"><span class="pulse"></span> LEARNING IN PUBLIC</p>
+          <h1>把学到的知识，<br><em>变成可复用的能力。</em></h1>
+          <p class="intro-copy">这里记录我从 Python 基础到 AI Agent 开发的完整学习路径，包括原理、踩坑记录与可以直接复现的项目实践。</p>
+        </div>
+        <div class="intro-actions">
+          <a class="primary-button" href="#latest">开始阅读 <span>↘</span></a>
+          <button class="text-button search-open" type="button">搜索文章 <kbd>/</kbd></button>
+        </div>
+      </section>
+      <section class="track-section" aria-labelledby="tracks-title">
+        <div class="section-heading"><div><p class="eyebrow">LEARNING TRACKS</p><h2 id="tracks-title">学习专题</h2></div><a href="categories.html">查看全部 <span>→</span></a></div>
+        <div class="track-grid">
+          <a class="track-card track-card--blue" href="categories.html#python-basic" data-category="Python 基础"><span class="track-index">01</span><span class="track-symbol">Py</span><div><h3>Python 基础</h3><p>语法、数据结构、函数与面向对象</p></div><span class="card-arrow">↗</span></a>
+          <a class="track-card track-card--violet" href="categories.html#python-advanced" data-category="Python 进阶"><span class="track-index">02</span><span class="track-symbol">{ }</span><div><h3>Python 进阶</h3><p>工程化、异步、性能与设计模式</p></div><span class="card-arrow">↗</span></a>
+          <a class="track-card track-card--orange" href="categories.html#prompt-engineering" data-category="提示词技术"><span class="track-index">03</span><span class="track-symbol">✦</span><div><h3>大模型提示词</h3><p>提示词方法、评估与工作流设计</p></div><span class="card-arrow">↗</span></a>
+          <a class="track-card track-card--green" href="categories.html#agent-platform" data-category="Agent 开发"><span class="track-index">04</span><span class="track-symbol">⌘</span><div><h3>Agent 开发</h3><p>使用 Coze、Dify 搭建智能应用</p></div><span class="card-arrow">↗</span></a>
+        </div>
+      </section>
+      <section class="latest-section" id="latest" aria-labelledby="latest-title">
+        <div class="section-heading"><div><p class="eyebrow">RECENT NOTES</p><h2 id="latest-title">最近更新</h2></div><span class="post-total" aria-live="polite">读取中</span></div>
+        <div class="post-list" id="post-list"><div class="loading-card">正在整理实验记录…</div></div>
+      </section>
+      <footer class="content-footer"><p>© <span data-current-year></span> lumi · Built while learning.</p><a href="#top">回到顶部 ↑</a></footer>
+    </main>
+    <aside class="right-rail">
+      <section class="profile-card"><div class="avatar" aria-hidden="true"><span>L</span><i></i></div><p class="eyebrow">ABOUT ME</p><h2>你好，我是 lumi</h2><p>一名持续学习的 AI 应用探索者，正在把技术知识整理成清晰、可实践的笔记。</p><a href="about.html">了解更多 <span>→</span></a></section>
+      <section class="status-card"><p class="eyebrow">LAB STATUS</p><dl><div><dt>文章</dt><dd data-stat="posts">—</dd></div><div><dt>专题</dt><dd>4</dd></div><div><dt>状态</dt><dd class="online"><i></i>更新中</dd></div></dl></section>
+      <section class="now-card"><p class="eyebrow">NOW</p><p>正在整理 Python 与 AI Agent 的学习笔记。</p><div class="progress"><i></i></div></section>
+    </aside>
+  </div>
+  <div class="search-dialog" role="dialog" aria-modal="true" aria-labelledby="search-title" hidden>
+    <div class="search-box"><div class="search-head"><div><p class="eyebrow">SEARCH THE LAB</p><h2 id="search-title">搜索文章</h2></div><button class="icon-button search-close" type="button" aria-label="关闭搜索">×</button></div><label class="search-input"><span>⌕</span><input type="search" placeholder="输入标题、分类或标签…" autocomplete="off"></label><div class="search-results"><p>输入关键词开始搜索。</p></div></div>
+  </div>
+  <script src="assets/js/app.js" defer></script>
 </body>
 </html>
