@@ -1,8 +1,8 @@
 const $=(selector,root=document)=>root.querySelector(selector);
 const $$=(selector,root=document)=>[...root.querySelectorAll(selector)];
 const state={posts:[]};
-function setTheme(theme){document.documentElement.dataset.theme=theme;localStorage.setItem('lumi-theme',theme);document.querySelector('meta[name="theme-color"]').content=theme==='dark'?'#07111f':'#edf4f9'}
-setTheme(localStorage.getItem('lumi-theme')||'dark');
+function setTheme(theme){document.documentElement.dataset.theme=theme;localStorage.setItem('lumi-theme-v2',theme);document.querySelector('meta[name="theme-color"]').content=theme==='dark'?'#181511':'#f5f0e4'}
+setTheme(localStorage.getItem('lumi-theme-v2')||'light');
 function formatDate(date){return new Intl.DateTimeFormat('zh-CN',{year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(date)).replaceAll('/','.');}
 function postUrl(post){return `article.html?slug=${encodeURIComponent(post.slug)}`}
 function postCard(post){return `<a class="post-card" href="${postUrl(post)}"><time class="post-date" datetime="${post.date}">${formatDate(post.date)}</time><div><h3>${post.title}</h3><p>${post.summary}</p><div class="post-meta"><span class="chip">${post.category}</span>${(post.tags||[]).slice(0,2).map(tag=>`<span class="chip">${tag}</span>`).join('')}</div></div><span class="post-go">↗</span></a>`}
